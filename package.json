@@ -1,0 +1,39 @@
+{
+  "name": "moleculer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm:dev:*\"",
+    "dev:moleculer": "nodemon src/start.js",
+    "dev:worker": "nodemon src/services/queue/mailWorker.js",
+    "dev:bullboard": "nodemon src/bullboard.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@bull-board/api": "^6.10.1",
+    "@bull-board/express": "^6.10.1",
+    "bullmq": "^5.54.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.5.0",
+    "express-rate-limit": "^7.5.0",
+    "fastest-validator": "^1.19.1",
+    "ioredis": "^5.6.1",
+    "jsonwebtoken": "^9.0.2",
+    "knex": "^3.1.0",
+    "moleculer": "^0.14.35",
+    "moleculer-web": "^0.10.8",
+    "nodemailer": "^7.0.3",
+    "nodemon": "^3.1.10",
+    "objection": "^3.1.5",
+    "pg": "^8.16.0",
+    "rate-limit-redis": "^4.2.1",
+    "redis": "^5.5.6"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
